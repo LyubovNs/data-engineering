@@ -1,0 +1,8 @@
+--CD C:\Program Files\PostgreSQL\12\bin
+--psql -V
+--createdb -U postgres datalearn
+--Psql -U postgres -l  посмотреть все бд
+--createuser -U postgres lyuba
+--ALTER USER user_name WITH PASSWORD 'new_password';
+--ALTER ROLE lyuba SUPERUSER CREATEROLE CREATEDB;
+--psql \! chcp 1251
