@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VisualAnalytics productName="Aqua Data Studio" productVersion="19.0.2-5" buildNumber="56797" fileVersion="1.4.0">
+    <workbook>
+        <dataSources autoRefresh="false">
+            <dataSource name="lyuba@datalearn [Monthly Sales by Segment ( табличка и график).sql]" useExtract="false" autoRefresh="false" type="ResultSet" id="9b029838-94d4-46aa-8470-b57cce2cb85d">
+                <connection path="datalearn" pathname="C:\Users\Lyuba\.datastudio\connections\datalearn.conn" username="lyuba" schema="public" database="datalearn" host="localhost" version="12.14" driver="POSTGRESQL" server="PostgreSQL"/>
+                <query>
+                    <statement>--Monthly Sales by Segment ( табличка и график)
+select 
+  segment,
+  sales,
+  order_date,
+  sum(sales) over(partition by segment order by date_trunc('month', order_date))
+from module02.orders</statement>
+                </query>
+                <dataSet truncated="0">
+                    <columns count="4">
+                        <column className="java.lang.String" dataType="varchar" isNumeric="false" index="0" name="segment"/>
+                        <column className="java.math.BigDecimal" dataType="numeric" isNumeric="true" index="1" name="sales"/>
+                        <column className="java.sql.Date" dataType="date" isNumeric="false" index="2" name="order_date"/>
+                        <column className="java.math.BigDecimal" dataType="numeric" isNumeric="true" index="3" name="sum"/>
+                    </columns>
+                </dataSet>
+                <dimensions>
+                    <field role="Dimension" mode="Discrete" aggregation="0" converted="false" columnClassName="java.sql.Date" columnClassDefaultName="java.sql.Date" originalDataSourceFieldName="order_date" columnIndex="2" sortOrder="1" sortBy="100" sortByType="ByAlphabet" sortByOrder="1" sortByValueIndex="-1" subtotalEnabled="false" domainCompletionEnabled="false" showMissingValues="false" sortByFieldColumnIndex="-1" sortByFieldAggregationType="-1" isCombineField="false" valid="true" name="order_date">
+                        <format formatOption="DateFormatOption" option="Automatic" autoOption="Automatic"/>
+                    </field>
+                    <field role="Dimension" mode="Discrete" aggregation="0" converted="false" columnClassName="java.lang.String" columnClassDefaultName="java.lang.String" originalDataSourceFieldName="segment" columnIndex="0" sortOrder="1" sortBy="100" sortByType="ByAlphabet" sortByOrder="1" sortByValueIndex="-1" subtotalEnabled="false" domainCompletionEnabled="false" showMissingValues="false" geoRole="None" sortByFieldColumnIndex="-1" sortByFieldAggregationType="-1" isCombineField="false" valid="true" name="segment"/>
+                </dimensions>
+                <measures>
+                    <field role="Measure" mode="Continuous" aggregation="14" converted="false" columnClassName="java.math.BigDecimal" columnClassDefaultName="java.math.BigDecimal" originalDataSourceFieldName="sales" columnIndex="1" sortOrder="1" sortBy="100" sortByType="ByAlphabet" sortByOrder="1" sortByValueIndex="-1" subtotalEnabled="false" domainCompletionEnabled="false" showMissingValues="false" geoRole="None" sortByFieldColumnIndex="-1" sortByFieldAggregationType="-1" isCombineField="false" valid="true" name="sales">
+                        <format formatOption="NumberFormatOption" option="Automatic" autoOption="Automatic" formatter="AutomaticNumberFormat"/>
+                    </field>
+                    <field role="Measure" mode="Continuous" aggregation="11" converted="false" columnClassName="java.math.BigDecimal" columnClassDefaultName="java.math.BigDecimal" originalDataSourceFieldName="sum" columnIndex="3" sortOrder="1" sortBy="100" sortByType="ByAlphabet" sortByOrder="1" sortByValueIndex="-1" subtotalEnabled="false" domainCompletionEnabled="false" showMissingValues="false" geoRole="None" sortByFieldColumnIndex="-1" sortByFieldAggregationType="-1" isCombineField="false" valid="true" name="sum">
+                        <format formatOption="NumberFormatOption" option="Automatic" autoOption="Automatic" formatter="AutomaticNumberFormat"/>
+                    </field>
+                    <field role="Measure" mode="Continuous" aggregation="11" converted="false" columnClassName="java.lang.Integer" columnClassDefaultName="java.lang.Integer" originalDataSourceFieldName="Количество записей" columnIndex="4" sortOrder="1" sortBy="100" sortByType="ByAlphabet" sortByOrder="1" sortByValueIndex="-1" subtotalEnabled="false" validName="true" domainCompletionEnabled="false" showMissingValues="false" geoRole="None" sortByFieldColumnIndex="-1" sortByFieldAggregationType="-1" isCombineField="false" valid="true" name="Количество записей">
+                        <expression>1</expression>
+                        <comment>Генерированное поле, которое подсчитывает количество строк</comment>
+                        <format formatOption="NumberFormatOption" option="Automatic" autoOption="Automatic" formatter="AutomaticNumberFormat"/>
+                    </field>
+                </measures>
+                <parameters/>
+                <hiddenFields/>
+            </dataSource>
+        </dataSources>
+        <window dataPaneVisible="true" selectedDataSource="lyuba@datalearn [Monthly Sales by Segment ( табличка и график).sql]" divider="250" height="814" width="1434" y="-8" x="1410">
+            <dataPaneHeights>
+                <height>47</height>
+                <height>220</height>
+                <height>217</height>
+                <height>216</height>
+            </dataPaneHeights>
+            <sheets selected="Рабочий лист 1">
+                <sheet tabColor="-1447447" type="Worksheet" title="Рабочий лист 1" name="Рабочий лист 1" selectionWorksheetName="Рабочий лист 1" hiddenHash="">
+                    <worksheet chartType="Automatic" axesType="Individual" axisRange="Uniform" startRangeType="Uniform" endRangeType="Uniform" axisTitle="Значение" tickType="Automatic" reversedAxis="false" shape="hollowCircle" renderingType="Default" opacity="1.0" minSizeMultiplier="0.3" sizeMultiplier="1.5" sizeMultiplierCenterHole="0.0" multiRing="false" showEmptyCategories="false" autoUpdate="true" showRowsGrandTotal="false" showColumnsGrandTotal="false" showDataLabels="false" allowLabelsToOverlap="false" showCategory="false" showPercentage="false" showValue="false" showColumnTotal="false" showColumnPercentage="false" showTrendLine="false" trendPerColor="false" forceYIntercept="false" showRecalculateTrend="true" showConfidenceBands="false" fitType="Linear" factorFields="" useEpochZero="false" fitOrder="2" includeZero="true" ignoreNegativeValues="true" gridStyle="web_grid" radarDisplayStyle="Line" uniformHeightFunnel="false" proportionalHeightFunnel="true" invertedFunnel="false" band="1" positiveColor="-14714956" negativeColor="-5767168" horizonThemeName="Automatic" tableDisplayStyle="Table" dataSource="lyuba@datalearn [Monthly Sales by Segment ( табличка и график).sql]" aggregateMeasures="true" color1="-3793378" color2="-1776580" color3="-10833062" colorOpacity1="1.0" colorOpacity2="1.0" colorOpacity3="1.0" defaultBarSize="30.0" theme="default" color="-14714956" tableColor="-16777216" usingCustomColor="false" defaultTotalsUsingAutomatic="true" geoNameResolutionType="None" showStateBorders="true" valueSortType="Default" markerType="Automatic" titleVisible="true" isLabelForegroundMatchMark="false" isLabelBackgroundMatchMark="false" fitWidth="false" fitHeight="false">
+                        <format formatOption="NumberFormatOption" option="Automatic" autoOption="Automatic" formatter="AutomaticNumberFormat"/>
+                        <dataLabels/>
+                        <columns>
+                            <column index="0" name="segment">
+                                <field role="Dimension" mode="Discrete" aggregation="0" converted="false" columnClassName="java.lang.String" columnClassDefaultName="java.lang.String" originalDataSourceFieldName="segment" columnIndex="0" sortOrder="1" sortBy="100" sortByType="ByAlphabet" sortByOrder="1" sortByValueIndex="-1" subtotalEnabled="false" domainCompletionEnabled="false" showMissingValues="false" geoRole="None" sortByFieldColumnIndex="-1" sortByFieldAggregationType="-1" isCombineField="false" valid="true" name="segment"/>
+                            </column>
+                        </columns>
+                        <rows>
+                            <row index="0" name="MONTH(order_date)">
+                                <field role="Dimension" mode="Discrete" aggregation="0" converted="false" columnClassName="java.sql.Date" columnClassDefaultName="java.sql.Date" originalDataSourceFieldName="order_date" columnIndex="2" sortOrder="1" sortBy="100" sortByType="ByAlphabet" sortByOrder="1" sortByValueIndex="-1" dateGrouping="Month" subtotalEnabled="false" domainCompletionEnabled="false" showMissingValues="false" sortByFieldColumnIndex="-1" sortByFieldAggregationType="-1" isCombineField="false" valid="true" name="order_date">
+                                    <format formatOption="DateGroupFormatOption" option="Automatic" autoOption="Automatic"/>
+                                </field>
+                                <fieldParameters includeZero="true" reversedAxis="false" tickType="Automatic"/>
+                            </row>
+                            <row index="1" name="SUM(sum)">
+                                <field title="Monthly Sales" role="Measure" mode="Continuous" aggregation="11" converted="false" columnClassName="java.math.BigDecimal" columnClassDefaultName="java.math.BigDecimal" originalDataSourceFieldName="sum" columnIndex="3" sortOrder="1" sortBy="100" sortByType="ByAlphabet" sortByOrder="1" sortByValueIndex="-1" subtotalEnabled="false" domainCompletionEnabled="false" showMissingValues="false" geoRole="None" sortByFieldColumnIndex="-1" sortByFieldAggregationType="-1" isCombineField="false" valid="true" name="sum">
+                                    <format formatOption="NumberFormatOption" option="Automatic" autoOption="Automatic" formatter="AutomaticNumberFormat"/>
+                                </field>
+                                <fieldParameters renderingType="Default" showDataLabels="false" includeZero="true" reversedAxis="false" axisRangeType="Fixed" tickType="Automatic" fixedUserMin="0.0" fixedUserMax="1.2E8" startSelectedOption="FixedStart" endSelectedOption="FixedEnd" markerType="Automatic" isLabelForegroundMatchMark="false" isLabelBackgroundMatchMark="false"/>
+                            </row>
+                        </rows>
+                        <decks>
+                            <deck id="rows" show="true" bounds="189,40,967,30"/>
+                            <deck id="cols" show="true" bounds="189,5,967,30"/>
+                            <deck id="filter" show="true" bounds="5,5,179,59"/>
+                            <deck id="marks" show="true" bounds="5,69,179,205"/>
+                        </decks>
+                        <rowHeaderPreferredColumnWidths/>
+                        <layout>
+                            <item type="row">
+                                <children>
+                                    <item type="column">
+                                        <children>
+                                            <item type="widget" key="filter"/>
+                                            <item type="widget" key="marks"/>
+                                        </children>
+                                    </item>
+                                    <item type="column">
+                                        <children>
+                                            <item type="widget" key="cols"/>
+                                            <item type="widget" key="rows"/>
+                                            <item type="widget" key="main"/>
+                                        </children>
+                                    </item>
+                                </children>
+                            </item>
+                        </layout>
+                        <hiddenLegendDecks/>
+                        <referenceOptions/>
+                    </worksheet>
+                </sheet>
+            </sheets>
+        </window>
+    </workbook>
+</VisualAnalytics>
