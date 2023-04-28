@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?><Diagram version="1.0" type="POSTGRES" versionMajor="9" versionMinor="4" groupSchema="false" hide_inv="false">
+<Table id="0" name="Customers" schema="module02" database="datalearn" background="16777165">
+<Column id="1" name="customer_id" type="varchar" length="50" nulls="false"/>
+<Column id="2" name="name" type="varchar" length="50" nulls="false"/>
+<Column id="3" name="surname" type="varchar" length="50" nulls="false"/>
+<Column id="4" name="region" type="varchar" length="50" nulls="false"/>
+<Column id="5" name="segment" type="varchar" length="50" nulls="false"/>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="6" name="Returned" schema="module02" database="datalearn" background="16777165">
+<Column id="7" name="row_id" type="varchar" length="25" nulls="false"/>
+<Column id="8" name="returned" type="varchar" length="10" nulls="true"/>
+<Column id="9" name="order_id" type="varchar" length="50" nulls="true"/>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="10" name="Orders" schema="module02" database="datalearn" background="16777165">
+<Column id="11" name="row_id" type="serial" length="25" nulls="false"/>
+<Column id="12" name="order_id" type="varchar" length="25" nulls="true"/>
+<Column id="13" name="customer_id" type="varchar" length="25" nulls="true"/>
+<Column id="14" name="product_id" type="varchar" length="50" nulls="true"/>
+<Column id="15" name="quantity" type="int" length="50" nulls="true"/>
+<Column id="16" name="geo_id" type="int" length="25" nulls="true"/>
+<Column id="17" name="manager_id" type="int" length="25" nulls="true"/>
+<Column id="18" name="order_date" type="date" length="25" nulls="true"/>
+<Column id="19" name="ship_date" type="date" length="25" nulls="true"/>
+<Column id="20" name="ship_mode" type="int" length="50" nulls="true"/>
+<Column id="21" name="sales" type="float" length="50" nulls="true"/>
+<Column id="22" name="discount" type="numeric" length="50" nulls="true">
+<CP name="PRECISION">2</CP>
+<CP name="SCALE">4</CP>
+</Column>
+<Column id="23" name="profit" type="numeric" length="50" nulls="true">
+<CP name="PRECISION">5</CP>
+<CP name="SCALE">20</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="24" name="Geography" schema="module02" database="datalearn" background="16777165">
+<Column id="25" name="geo_id" type="serial" length="25" nulls="false"/>
+<Column id="26" name="region" type="varchar" length="25" nulls="true"/>
+<Column id="27" name="country" type="varchar" length="50" nulls="true"/>
+<Column id="28" name="state" type="varchar" length="50" nulls="true"/>
+<Column id="29" name="city" type="varchar" length="50" nulls="true"/>
+<Column id="30" name="postal_code" type="int" length="25" nulls="true"/>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="31" name="Products" schema="module02" database="datalearn" background="16777165">
+<Column id="32" name="product_id" type="varchar" length="50" nulls="false"/>
+<Column id="33" name="product_name" type="varchar" length="50" nulls="false"/>
+<Column id="34" name="category" type="varchar" length="25" nulls="false"/>
+<Column id="35" name="sub_сategory" type="varchar" length="25" nulls="false"/>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="36" name="Managers" schema="module02" database="datalearn" background="16777165">
+<Column id="37" name="id" type="int" length="25" nulls="false"/>
+<Column id="38" name="name" type="varchar" length="50" nulls="false"/>
+<Column id="39" name="surname" type="varchar" length="50" nulls="false"/>
+<Column id="40" name="region" type="varchar" length="25" nulls="false"/>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="41" name="Ship" schema="module02" database="datalearn" background="16777165">
+<Column id="42" name="id" type="serial" length="25" nulls="false"/>
+<Column id="43" name="ship_mode" type="varchar" length="25" nulls="false"/>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Relation id="44" name="REL_2" cardinality="-2" identifying="false" nulls="false">
+<FK>12</FK>
+<PK>9</PK>
+</Relation>
+<Relation id="45" name="REL_1" cardinality="-2" identifying="false" nulls="false">
+<FK>13</FK>
+<PK>1</PK>
+</Relation>
+<Relation id="46" name="REL_3" cardinality="-2" identifying="false" nulls="false">
+<FK>14</FK>
+<PK>32</PK>
+</Relation>
+<Relation id="47" name="REL_4" cardinality="-2" identifying="false" nulls="false">
+<FK>16</FK>
+<PK>25</PK>
+</Relation>
+<Relation id="48" name="REL_6" cardinality="-2" identifying="false" nulls="false">
+<FK>20</FK>
+<PK>42</PK>
+<Text/>
+</Relation>
+<Relation id="49" name="REL_5" cardinality="-2" identifying="false" nulls="false">
+<FK>17</FK>
+<PK>37</PK>
+<Text/>
+</Relation>
+<Constraint table="0" name="PK_People_1" type="PrimKey">
+<ConstraintColumn id="1"/>
+</Constraint>
+<Constraint table="6" name="PK_Returned_1" type="PrimKey">
+<ConstraintColumn id="7"/>
+</Constraint>
+<Constraint table="10" name="PK_Orders_1" type="PrimKey">
+<ConstraintColumn id="11"/>
+</Constraint>
+<Constraint table="24" name="PK_Region_1" type="PrimKey">
+<ConstraintColumn id="25"/>
+</Constraint>
+<Constraint table="31" name="PK_Products_1" type="PrimKey">
+<ConstraintColumn id="32"/>
+</Constraint>
+<Constraint table="36" name="PK_Managers_1" type="PrimKey">
+<ConstraintColumn id="37"/>
+</Constraint>
+<Constraint table="41" name="PK_Ship_1" type="PrimKey">
+<ConstraintColumn id="42"/>
+</Constraint>
+<Sheet name="Безымянный 1" id="50" disp_at="true" disp_ph="true">
+<Place id="41" visible="true">570,590,201,61</Place>
+<Place id="0" visible="true">120,350,271,111</Place>
+<Place id="6" visible="true">440,60,191,71</Place>
+<Place id="31" visible="true">770,380,231,91</Place>
+<Place id="46" visible="true">500,0,0,0</Place>
+<Place id="45" visible="true">500,0,0,0</Place>
+<Place id="47" visible="true">500,0,0,0</Place>
+<Place id="48" visible="true">500,0,0,0</Place>
+<Place id="24" visible="true">690,130,261,141</Place>
+<Place id="36" visible="true">160,130,231,101</Place>
+<Place id="10" visible="true">460,260,221,251</Place>
+<Place id="49" visible="true">500,0,0,0</Place>
+<Place id="44" visible="true">500,0,0,0</Place>
+</Sheet>
+<Settings sheet="50" zoom="1.0"/>
+</Diagram>
