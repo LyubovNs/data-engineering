@@ -110,22 +110,18 @@
 <Relation id="36" name="REL_2" cardinality="-2" identifying="false" nulls="false">
 <FK>10</FK>
 <PK>7</PK>
-<Text/>
 </Relation>
 <Relation id="37" name="REL_1" cardinality="-2" identifying="false" nulls="false">
 <FK>11</FK>
 <PK>1</PK>
-<Text/>
 </Relation>
 <Relation id="38" name="REL_3" cardinality="-2" identifying="false" nulls="false">
 <FK>16</FK>
 <PK>29</PK>
-<Text/>
 </Relation>
 <Relation id="39" name="REL_4" cardinality="-2" identifying="false" nulls="false">
 <FK>12</FK>
 <PK>22</PK>
-<Text/>
 </Relation>
 <Constraint table="0" name="PK_People_1" type="PrimKey">
 <ConstraintColumn id="1"/>
@@ -146,16 +142,16 @@
 <ConstraintColumn id="35"/>
 </Constraint>
 <Sheet name="Безымянный 1" id="40" disp_at="true" disp_ph="true">
-<Place id="5" visible="true">480,70,191,71</Place>
-<Place id="21" visible="true">940,140,261,141</Place>
-<Place id="33" visible="true">180,150,201,71</Place>
 <Place id="8" visible="true">560,250,221,241</Place>
-<Place id="28" visible="true">1010,520,231,91</Place>
-<Place id="37" visible="true">500,0,0,0</Place>
 <Place id="38" visible="true">500,0,0,0</Place>
+<Place id="5" visible="true">480,70,191,71</Place>
 <Place id="0" visible="true">100,380,251,91</Place>
-<Place id="36" visible="true">500,0,0,0</Place>
+<Place id="33" visible="true">180,150,201,71</Place>
+<Place id="21" visible="true">940,140,261,141</Place>
+<Place id="37" visible="true">500,0,0,0</Place>
 <Place id="39" visible="true">500,0,0,0</Place>
+<Place id="36" visible="true">500,0,0,0</Place>
+<Place id="28" visible="true">1010,520,231,91</Place>
 </Sheet>
-<Settings sheet="40" zoom="1.0"/>
+<Settings sheet="40" zoom="0.8408964152537148"/>
 </Diagram>

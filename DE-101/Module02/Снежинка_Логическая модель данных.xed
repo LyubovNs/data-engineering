@@ -209,7 +209,7 @@
 <Constraint table="44" name="PK_Segment_1" type="PrimKey">
 <ConstraintColumn id="45"/>
 </Constraint>
-<Sheet name="Безымянный 1" id="55" disp_at="true" disp_ph="true">
+<Sheet name="Безымянный 1" id="55" disp_at="true">
 <Place id="44" visible="true">80,470,170,79</Place>
 <Place id="53" visible="true">500,0,0,0</Place>
 <Place id="0" visible="true">328,436,271,111</Place>

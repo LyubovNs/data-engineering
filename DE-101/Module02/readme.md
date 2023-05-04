@@ -47,10 +47,11 @@ select
   to_char(date_trunc('year', order_date), 'yyyy') as year,
   round(sum(sales) over(partition by category order by date_trunc('year', order_date)), 2) as sum_sale_by_category_per_year,
   count(order_id) over(partition by category order by date_trunc('year', order_date)) as count_order_by_category_per_year
-from module02.orders
+   from module02.orders
 ```
 
 ## Нарисовать модель данных в SQLdbm
+![Модель](D:\Job\data-engineering\DE-101\Module02\Снежинка.jpeg)
 
 ## Нарисовать графики в Google Sheets
 
