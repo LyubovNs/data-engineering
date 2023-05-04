@@ -51,7 +51,7 @@ select
 ```
 
 ## Нарисовать модель данных в SQLdbm
-![Модель](D:\Job\data-engineering\DE-101\Module02\Снежинка.jpg)
+![Модель](Снежинка.jpg)
 
 ## Нарисовать графики в Google Sheets
 
