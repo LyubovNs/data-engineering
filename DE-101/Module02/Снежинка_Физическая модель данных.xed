@@ -44,12 +44,12 @@
 <Column id="20" name="ship_mode" type="int" length="50" nulls="true"/>
 <Column id="21" name="sales" type="float" length="50" nulls="true"/>
 <Column id="22" name="discount" type="numeric" length="50" nulls="true">
-<CP name="PRECISION">2</CP>
-<CP name="SCALE">4</CP>
+<CP name="PRECISION">4</CP>
+<CP name="SCALE">2</CP>
 </Column>
 <Column id="23" name="profit" type="numeric" length="50" nulls="true">
-<CP name="PRECISION">5</CP>
-<CP name="SCALE">20</CP>
+<CP name="PRECISION">20</CP>
+<CP name="SCALE">5</CP>
 </Column>
 <Storage name="transferTable" value="false"/>
 <Storage name="ValueCompression" value="false"/>
